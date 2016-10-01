@@ -9,13 +9,12 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one', function(req,res){
-res.send('THE ARTICLE ONE THAT WAS REQUESTED');
-});
-
-
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
+});
+
+app.get('/article-one', function(req,res){
+    res.sendFile(path.join(__dirname,'ui','article-one.html'));
 });
 
 app.get('/ui/madi.png', function (req, res) {
